@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>demo7</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,800" rel="stylesheet" media="screen">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="color/default.css" rel="stylesheet" media="screen">
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Mukta');
+    a {
+        text-decoration: none;
+        color: #00c1c1;
+    }
+    
+    .row_header_support_icon {
+        display: flex;
+        justify-content: flex-end;
+    }
+    /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+    
+    #header .logo h1 a,
+    #header .logo h1 a:hover {
+        color: #00c1c1;
+        text-decoration: none;
+    }
+    
+    #header {
+        transition: all 0.5s;
+        z-index: 997;
+        transition: all 0.5s;
+        top: 20px;
+        background: white;
+    }
+    
+    #header .header-container {
+        background: #fff;
+    }
+    
+    #header.header-scrolled {
+        background: #fff;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        top: 0;
+    }
+    
+    #header .logo {
+        overflow: hidden;
+        padding: 16px 30px 12px 30px;
+        background: #00c1c1;
+    }
+    
+    #header .logo h1 {
+        font-size: 26px;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    #header .logo h1 a,
+    #header .logo h1 a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    #header .logo img {
+        padding: 0;
+        margin: 0;
+        max-height: 40px;
+    }
+    
+    @media (max-width: 992px) {
+        #header {
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+            top: 0;
+            background: #00c1c1;
+        }
+        #header.header-scrolled,
+        #header .header-container {
+            background: #00c1c1;
+        }
+        #header .logo h1 {
+            font-size: 24px;
+        }
+    }
+    /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+    /* Desktop Navigation */
+    
+    .nav-menu,
+    .nav-menu * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .nav-menu>ul>li {
+        position: relative;
+        white-space: nowrap;
+        float: left;
+    }
+    
+    .nav-menu a {
+        display: block;
+        position: relative;
+        color: #36343a;
+        padding: 10px 15px;
+        transition: 0.3s;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    .nav-menu a:hover,
+    .nav-menu .active>a,
+    .nav-menu li:hover>a {
+        color: #00c1c1;
+        text-decoration: none;
+    }
+    
+    .nav-menu .get-started a {
+        background: #00c1c1;
+        color: #fff;
+        border-radius: 50px;
+        margin: 0 15px;
+        padding: 10px 25px;
+    }
+    
+    .nav-menu .get-started a:hover {
+        background: #00805d;
+        color: #fff;
+    }
+    
+    .nav-menu .drop-down ul {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 30px);
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        padding: 10px 0;
+        background: #fff;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        transition: ease all 0.3s;
+    }
+    
+    .nav-menu .drop-down:hover>ul {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+    }
+    
+    .nav-menu .drop-down li {
+        min-width: 180px;
+        position: relative;
+    }
+    
+    .nav-menu .drop-down ul a {
+        padding: 10px 20px;
+        font-weight: 500;
+        text-transform: none;
+        color: black;
+    }
+    
+    .nav-menu .drop-down ul a:hover,
+    .nav-menu .drop-down ul .active>a,
+    .nav-menu .drop-down ul li:hover>a {
+        color: #00c1c1;
+    }
+    
+    .nav-menu .drop-down>a:after {
+        content: "\ea99";
+        font-family: IcoFont;
+        padding-left: 5px;
+    }
+    
+    .nav-menu .drop-down .drop-down ul {
+        top: 0;
+        left: calc(100% - 30px);
+    }
+    
+    .nav-menu .drop-down .drop-down:hover>ul {
+        opacity: 1;
+        top: 0;
+        left: 100%;
+    }
+    
+    .nav-menu .drop-down .drop-down>a {
+        padding-right: 35px;
+    }
+    
+    .nav-menu .drop-down .drop-down>a:after {
+        content: "\eaa0";
+        font-family: IcoFont;
+        position: absolute;
+        right: 15px;
+    }
+    
+    @media (max-width: 1366px) {
+        .nav-menu .drop-down .drop-down ul {
+            left: -90%;
+        }
+        .nav-menu .drop-down .drop-down:hover>ul {
+            left: -100%;
+        }
+        .nav-menu .drop-down .drop-down>a:after {
+            content: "\ea9d";
+        }
+    }
+    /* Mobile Navigation */
+    
+    .mobile-nav-toggle {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 9998;
+        border: 0;
+        background: none;
+        font-size: 24px;
+        transition: all 0.4s;
+        outline: none !important;
+        line-height: 1;
+        cursor: pointer;
+        text-align: right;
+    }
+    
+    .mobile-nav-toggle i {
+        color: #fff;
+    }
+    
+    .mobile-nav {
+        position: fixed;
+        top: 55px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        z-index: 9999;
+        overflow-y: auto;
+        background: #fff;
+        transition: ease-in-out 0.2s;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 10px;
+        padding: 10px 0;
+    }
+    
+    .mobile-nav * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .mobile-nav a {
+        display: block;
+        position: relative;
+        color: #36343a;
+        padding: 10px 20px;
+        font-weight: 500;
+        outline: none;
+    }
+    
+    .mobile-nav a:hover,
+    .mobile-nav .active>a,
+    .mobile-nav li:hover>a {
+        color: #00c1c1;
+        text-decoration: none;
+    }
+    
+    .mobile-nav .get-started {
+        text-align: center;
+    }
+    
+    .mobile-nav .get-started a {
+        background: #00c1c1;
+        color: #fff;
+        border-radius: 50px;
+        margin: 0 15px;
+        padding: 10px 25px;
+        display: inline-block;
+    }
+    
+    .mobile-nav .get-started a:hover {
+        background: #00c28e;
+        color: #fff;
+    }
+    
+    .mobile-nav .drop-down>a:after {
+        content: "\ea99";
+        font-family: IcoFont;
+        padding-left: 10px;
+        position: absolute;
+        right: 15px;
+    }
+    
+    .mobile-nav .active.drop-down>a:after {
+        content: "\eaa1";
+    }
+    
+    .mobile-nav .drop-down>a {
+        padding-right: 35px;
+    }
+    
+    .mobile-nav .drop-down ul {
+        display: none;
+        overflow: hidden;
+    }
+    
+    .mobile-nav .drop-down li {
+        padding-left: 20px;
+    }
+    
+    .mobile-nav-overly {
+        width: 100%;
+        height: 100%;
+        z-index: 9997;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: rgba(29, 28, 31, 0.6);
+        overflow: hidden;
+        display: none;
+        transition: ease-in-out 0.2s;
+    }
+    
+    .mobile-nav-active {
+        overflow: hidden;
+    }
+    
+    .mobile-nav-active .mobile-nav {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .mobile-nav-active .mobile-nav-toggle i {
+        color: #fff;
+    }
+    
+    .banner_img {
+        background: url(./img/bg3.jpg) no-repeat center center;
+        position: relative;
+        height: 85vh;
+        background-size: cover;
+        top: 69px;
+    }
+    
+    .login-reg-panel {
+        position: relative;
+        top: 53%;
+        transform: translateY(-50%);
+        text-align: center;
+        width: 70%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: 355px;
+        background-color: #00c1c1a1;
+    }
+    
+    .white-panel {
+        background-color: rgba(255, 255, 255, 1);
+        height: 442px;
+        position: absolute;
+        top: -50px;
+        width: 50%;
+        right: calc(50% - 50px);
+        transition: .3s ease-in-out;
+        z-index: 0;
+        box-shadow: 0 0 15px 9px #00000096;
+    }
+    
+    .login-reg-panel input[type="radio"] {
+        position: relative;
+        display: none;
+    }
+    
+    .login-reg-panel {
+        color: white;
+    }
+    
+    .login-reg-panel #label-login,
+    .login-reg-panel #label-register {
+        border: 1px solid #185f4c;
+        padding: 5px 5px;
+        width: 150px;
+        display: block;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 18px;
+        color: white;
+        margin-top: 66px;
+    }
+    
+    .login-info-box {
+        width: 40%;
+        padding: 0 0 0 50px;
+        top: 48%;
+        left: 0;
+        position: absolute;
+        text-align: left;
+    }
+    
+    .register-info-box {
+        width: 40%;
+        top: 48%;
+        right: 0;
+        position: absolute;
+        text-align: left;
+    }
+    
+    .right-log {
+        right: 50px !important;
+    }
+    
+    .login-show,
+    .register-show {
+        z-index: 1;
+        display: none;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        color: #242424;
+        text-align: left;
+        padding: 50px;
+    }
+    
+    .show-log-panel {
+        display: block;
+        opacity: 0.9;
+    }
+    
+    .login-show input[type="text"],
+    .login-show input[type="password"] {
+        width: 100%;
+        display: block;
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #00c1c1;
+        outline: none;
+        background: #00c1c1;
+        border-radius: 30px;
+    }
+    
+    .login_btn {
+        max-width: 150px;
+        width: 100%;
+        background: #00c1c1;
+        color: #f9f9f9;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 2px;
+        float: right;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    
+    .login-show a {
+        display: inline-block;
+        padding: 10px 0;
+    }
+    
+    .register-show input[type="text"],
+    .register-show input[type="password"] {
+        width: 100%;
+        display: block;
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #00c1c1;
+        outline: none;
+        background: #00c1c1;
+        border-radius: 30px;
+    }
+    
+    .Register_btn {
+        max-width: 150px;
+        width: 100%;
+        background: #00c1c1;
+        color: #f9f9f9;
+        border: none;
+        padding: 10px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        float: right;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    
+    .credit {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: #3B3B25;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        z-index: 99;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #575757;
+    }
+    
+    .footer_ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer_ul2 {
+        display: none;
+        list-style: none;
+        padding: 10px 0 0 25px;
+        margin: 10px 0;
+    }
+    
+    .footer {
+        margin-top: 9pc;
+    }
+    
+    li.footer_link {
+        margin: 0 30px;
+    }
+    
+    .copyright_row2 {
+        display: flex;
+        justify-content: center;
+    }
+    
+    @media only screen and (max-width:575px) {
+        .log_img {
+            width: 160px !important;
+            padding: 10px 0 0 0;
+        }
+        .input_container {
+            width: 100%;
+        }
+        .register_now {
+            margin-top: 20px;
+        }
+        a.register {
+            margin-right: 20px;
+        }
+        .support a i {
+            font-size: 20px;
+            margin: 14px 10px 0 0;
+            color: #244190;
+        }
+        .support {
+            padding-right: 0px !important;
+        }
+        .banner h3 {
+            margin-top: 20px;
+            font-size: 25px;
+        }
+        .contact {
+            color: white;
+            width: 78%;
+            margin-left: 36px;
+        }
+        div.main {
+            height: 80vh;
+        }
+        .footer_ul {
+            display: none;
+        }
+        .footer_ul2 {
+            display: block !important;
+            list-style: none;
+            padding: 10px 0 0 25px;
+            margin: 10px 0;
+        }
+        .btn_login {
+            margin-top: 0 !important;
+        }
+        .mobile_btn {
+            margin-left: 0;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                  <span class="sr-only">Toggle nav</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- Logo text or image -->
+                <a class="navbar-brand" href="index.html">pineapple</a>
+            </div>
+            <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="current"><a href="#intro" class="active">Flight</a></li>
+                    <li><a href="#about">Hotel</a></li>
+                    <li><a href="#services">Holidys</a></li>
+                    <li class="nav-item px-4 dropdown Holiday">
+                        <!-- first is the link in your navbar -->
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" aria-haspopup="true" aria-expanded="false">car</a>
+
+                        <!-- your mega menu starts here! -->
+                        <div class="dropdown-menu megaOption dropdown-menu-right container" aria-labelledby="servicesDropdown">
+                            <div class="row">
+                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                </ul>
+                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                </ul>
+                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                </ul>
+                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner_img">
+        <div class="login-reg-panel">
+            <div class="login-info-box">
+                <h2>User</h2>
+                <!-- <p>Login with your id</p> -->post_login
+                <label id="label-register" for="log-reg-show">User Login</label>
+                <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+            </div>
+
+            <div class="register-info-box">
+                <h2>Administrator</h2>
+                <!-- <p>Admin Login</p> -->
+                <label id="label-login" for="log-login-show">Admin Login</label>
+                <input type="radio" name="active-log-panel" id="log-login-show">
+            </div>
+
+            <div class="white-panel">
+                <div class="login-show">
+                    <h2>User Login</h2>
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <a href="">Forgot password?</a>
+                    <button class="login_btn" type="button"><a style="color: #ffffff;" href="./index.html">Login</a></button>
+                </div>
+                <div class="register-show">
+                    <h2>Administrator</h2>
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button class="Register_btn" type="button"><a style="color: #ffffff;" href="./index.html">Login</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="container-fluid" style="height: 15px;">
+            <div class="row footer_link_row">
+                <div class="col-md-12">
+                    <ul class="footer_ul row">
+                        <li class="footer_link"><a href="#">About Us </a></li>|
+                        <li class="footer_link"> <a href="#">Privacy Policy </a></li>|
+                        <li class="footer_link"> <a href="#">Cancellation & Refund Policy </a></li>|
+                        <li class="footer_link"> <a href="#">Terms & Conditions</a></li>
+                    </ul>
+                    <ul class="footer_ul2">
+                        <li class="footer_link"><a href="#">About Us</a> </li>
+                        <li class="footer_link"> <a href="#">Privacy Policy</a></li>
+                        <li class="footer_link"> <a href="#">Cancellation & Refund Policy</a></li>
+                        <li class="footer_link"> <a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row copyright_row">
+                <div class="col-md-12">
+                    <footer class="footer-section">
+                        <div class="copyright-area">
+                            <div class="container" style="margin-left: 25px;">
+                                <div class="row copyright_row2">
+                                    <div class="text-center text-lg-left">
+                                        <div class="copyright-text">
+                                            <p>Copyright &copy; 2021, All Right Reserved</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- js -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/stellar.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Custom Javascript File -->
+    <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.login-info-box').fadeOut();
+            $('.login-show').addClass('show-log-panel');
+        });
+
+
+        $('.login-reg-panel input[type="radio"]').on('change', function() {
+
+            if ($('#log-login-show').is(':checked')) {
+
+                $('.register-info-box').fadeOut();
+                $('.login-info-box').fadeIn();
+
+                $('.white-panel').addClass('right-log');
+                $('.register-show').addClass('show-log-panel');
+                $('.login-show').removeClass('show-log-panel');
+
+            } else if ($('#log-reg-show').is(':checked')) {
+
+                $('.register-info-box').fadeIn();
+                $('.login-info-box').fadeOut();
+
+                $('.white-panel').removeClass('right-log');
+
+                $('.login-show').addClass('show-log-panel');
+                $('.register-show').removeClass('show-log-panel');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
