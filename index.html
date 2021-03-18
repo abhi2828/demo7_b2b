@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>demo7</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,800" rel="stylesheet" media="screen">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="color/default.css" rel="stylesheet" media="screen">
+</head>
+<style>
+    /* footer */
+    
+    .footer-text p {
+        margin-bottom: 14px;
+        font-size: 14px;
+        color: #000000;
+        text-align: center;
+    }
+    
+    .footer-social-icon span {
+        color: #fff;
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 20px;
+    }
+    
+    .footer-social-icon a {
+        color: #fff;
+        font-size: 16px;
+        margin-right: 15px;
+    }
+    
+    .footer-social-icon i {
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 38px;
+        border-radius: 50%;
+    }
+    
+    .facebook-bg {
+        background: #3B5998;
+    }
+    
+    .twitter-bg {
+        background: #55ACEE;
+    }
+    
+    .google-bg {
+        background: #DD4B39;
+    }
+    
+    .footer-widget-heading h3 {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    /*     
+    .OurServicesHeading h3::before {
+        left: 94px !important;
+    } */
+    
+    .footer-widget-heading h3::before {
+        content: "";
+        position: absolute;
+        right: 78px;
+        bottom: -15px;
+        height: 2px;
+        width: 76px;
+        background: white;
+    }
+    
+    .footer-widget ul li {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 2px;
+        text-align: left;
+    }
+    
+    .OurServices li {
+        padding-left: 75px !important;
+    }
+    
+    .footer-widget ul li a:hover {
+        color: white;
+    }
+    
+    .footer-widget ul li a {
+        color: #002939;
+        text-transform: capitalize;
+    }
+    
+    .subscribe-form {
+        position: relative;
+        overflow: hidden;
+        padding: 0 277px;
+    }
+    
+    .subscribe-form input {
+        width: 100%;
+        padding: 14px 28px;
+        background: #fffbfb;
+        border: 1px solid #2f3e54;
+        color: #fff;
+        height: 55px;
+        border-radius: 10px;
+    }
+    
+    .subscribe-form button {
+        position: absolute;
+        right: 24%;
+        background: #2f3e54;
+        padding: 13px 20px;
+        border: 1px solid #2f3e54;
+        top: 0;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .subscribe-form button i {
+        color: white;
+        font-size: 22px;
+        transform: rotate(-6deg);
+    }
+    
+    .copyright-area {
+        background: white;
+        padding: 25px 0;
+    }
+    
+    .copyright-text p {
+        margin: 0;
+        font-size: 14px;
+        color: #5f6060;
+    }
+    
+    .copyright-text p a {
+        color: white;
+    }
+    
+    .footer-menu li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    
+    .footer-menu li:hover a {
+        color: white;
+    }
+    
+    .footer-menu li a {
+        font-size: 14px;
+        color: #002939;
+    }
+    
+    footer {
+        background: #00c1c1;
+    }
+    
+    img.dowloadlink {
+        width: 90px;
+    }
+    
+    .dowloadlink_heading h3::before {
+        right: 200px !important;
+    }
+    
+    .payment_option_icon {
+        font-size: 30px;
+    }
+    
+    .text-white {
+        color: #908d8d!important;
+    }
+    
+    .page-content {
+        margin-top: 30px;
+    }
+    
+    .footer-widget-heading {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .OurServicesHeading h3 {
+        padding-left: 60px;
+    }
+    
+    .footer-widget ul li a {
+        color: #ffffff;
+        text-transform: capitalize;
+        font-size: 16px;
+    }
+    
+    img.card-img-top {
+        height: 205px;
+    }
+    
+    .news {
+        text-align: center;
+    }
+    
+    ul.social-network {
+        display: flex;
+        justify-content: center;
+        margin-left: -50px;
+    }
+    
+    element.style {
+        width: 70px;
+        background: white;
+        border-radius: 50%;
+        height: 70px;
+        margin-left: 50px;
+    }
+    
+    img.dowloadlink {
+        width: 90px;
+        margin: 4px -10px;
+    }
+    
+    img.dowloadlink2 {
+        width: 90px;
+        margin: 4px -7px;
+    }
+    
+    .download_app_link {
+        width: 70px;
+        background: white;
+        border-radius: 50%;
+        height: 70px;
+        margin-left: 90px;
+    }
+    
+    .download_app_link2 {
+        width: 70px;
+        background: white;
+        border-radius: 50%;
+        height: 70px;
+        margin-left: 0;
+    }
+</style>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                  <span class="sr-only">Toggle nav</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- Logo text or image -->
+                <a class="navbar-brand" href="index.html">pineapple</a>
+            </div>
+            <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="current"><a href="#intro" class="active">Flight</a></li>
+                    <li><a href="#about">Hotel</a></li>
+                    <li><a href="#services">Holidys</a></li>
+                    <li class="nav-item px-4 dropdown Holiday">
+                        <!-- first is the link in your navbar -->
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" aria-haspopup="true" aria-expanded="false">car</a>
+
+                        <!-- your mega menu starts here! -->
+                        <div class="dropdown-menu megaOption dropdown-menu-right container" aria-labelledby="servicesDropdown">
+                            <div class="row">
+                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                </ul>
+                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                </ul>
+                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                </ul>
+                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                    <li>item1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- intro area -->
+    <section id="intro">
+        <div class="intro-container">
+            <div id="introCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox">
+
+                    <!-- Slide 1 -->
+                    <div class="item active">
+                        <div class="carousel-background"><img src="img/intro/1.jpg" alt=""></div>
+                        <div class="carousel-container">
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="item">
+                        <div class="carousel-background"><img src="img/intro/2.jpg" alt=""></div>
+                        <div class="carousel-container">
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="item">
+                        <div class="carousel-background"><img src="img/intro/3.jpg" alt=""></div>
+
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon fa fa-angle-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon fa fa-angle-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!-- #intro -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 7px;">
+                    <div class="wrap">
+                        <div class="radio_btn">
+                            <label class="input_lable">
+                                    <input id='watch-me' type="radio" name="dark" value="One_way" checked>
+                                    <span class="design"></span>
+                                    <span class="text One_way">One way</span>
+                                </label>
+
+                            <label class="input_lable">
+                                    <input id='see-me' type="radio" name="dark" value="Roundtrip">
+                                    <span class="design"></span>
+                                    <span class="text Roundtrip">Roundtrip</span>
+                                </label>
+
+                            <label class="input_lable">
+                                    <input id='look-me' type="radio" name="dark" value="multi_city">
+                                    <span class="design"></span>
+                                    <span class="text multi_city">Multi-City</span>
+                                </label>
+                        </div>
+                        <br>
+                        <div id='show-me' class="form">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="active_lable" for="From">Flying From</label>
+                                    <input id="From" placeholder="Flying From" type="text" class="cool" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="active_lable" for="TO">Flying TO</label>
+                                    <input id="TO" placeholder="Flying To" type="text" class="cool" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="active_lable" for="fname" class="date">Departure Date</label>
+                                    <input id="fname" type="date" class="cool" />
+                                </div>
+                            </div>
+                            <div class="row mb-0 mt-0">
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="lname">Adult</label>
+                                    <input id="lname" type="number" min="1" max="10" value="1" class="cool" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="lname">Children (2 - 12 yrs)</label>
+                                    <input id="lname" type="number" min="0" max="10" value="0" class="cool" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="lname">Infant (0 - 24 Month)</label>
+                                    <input id="lname" type="number" min="0" max="10" value="0" class="cool" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="Travel class">Travel class</label>
+                                    <select class="drop_down_option">
+                                                <option>Economy class</option>
+                                                <option>Business class</option>
+                                                <option>First class</option>
+                                            </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-0 mt-0">
+                                <div class="col-md-5 off-set-4"></div>
+                                <div class="col-md-4 off-set-4">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck1"> <span id="Check_content">Direct Flight</span>
+                                    <button type="submit" class="btn btn-danger my-1 ">Show flights</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id='show-me-two' class="form">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="active_lable" for="From">Flying From</label>
+                                    <input id="From" placeholder="Flying From" type="text" class="cool" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="active_lable" for="TO">Flying TO</label>
+                                    <input id="TO" placeholder="Flying To" type="text" class="cool" />
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="active_lable" for="fname" class="date">Departure Date</label>
+                                    <input id="fname" type="date" class="cool" />
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="active_lable" for="fname" class="date">Arrival Date</label>
+                                    <input id="fname" type="date" class="cool" />
+                                </div>
+                            </div>
+                            <div class="row mb-0 mt-0">
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="lname">Adult</label>
+                                    <input id="lname" type="number" min="1" max="10" value="1" class="cool" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="lname">Children (2 - 12 yrs)</label>
+                                    <input id="lname" type="number" min="0" max="10" value="0" class="cool" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="lname">Infant (0 - 24 Month)</label>
+                                    <input id="lname" type="number" min="0" max="10" value="0" class="cool" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="Travel class">Travel class</label>
+                                    <select class="drop_down_option">
+                                                <option>Economy class</option>
+                                                <option>Business class</option>
+                                                <option>First class</option>
+                                            </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-0 mt-0">
+                                <div class="col-md-5 off-set-4"></div>
+                                <div class="col-md-4 off-set-4">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck1"> <span id="Check_content">Direct Flight</span>
+                                    <button type="submit" class="btn btn-danger my-1 ">Show flights</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id='show-me-three' class="form">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="active_lable" for="From">Flying From</label>
+                                    <input id="From" placeholder="Flying From" type="text" class="cool" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="active_lable" for="TO">Flying TO</label>
+                                    <input id="TO" placeholder="Flying To" type="text" class="cool" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="active_lable" for="fname" class="date">Departure Date</label>
+                                    <input id="fname" type="date" class="cool" />
+                                </div>
+                                <!-- <div class="col-md-2">
+                                        <label class="active_lable" for="fname" class="date">Arrival Date</label>
+                                        <input id="fname" type="date" class="cool" />
+                                    </div> -->
+                            </div>
+                            <div class="row mb-0 mt-0">
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="lname">Adult</label>
+                                    <input id="lname" type="number" min="1" max="10" value="1" class="cool" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="lname">Children (2 - 12 yrs)</label>
+                                    <input id="lname" type="number" min="0" max="10" value="0" class="cool" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="lname">Infant (0 - 24 Month)</label>
+                                    <input id="lname" type="number" min="0" max="10" value="0" class="cool" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="active_lable" for="Travel class">Travel class</label>
+                                    <select class="drop_down_option">
+                                                <option>Economy class</option>
+                                                <option>Business class</option>
+                                                <option>First class</option>
+                                            </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-0 mt-0">
+                                <div class="col-md-5 off-set-4"></div>
+                                <div class="col-md-4 off-set-4">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck1"> <span id="Check_content">Direct Flight</span>
+                                    <button type="submit" class="btn btn-danger my-1 ">Show flights</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= Services Section ======= -->
+
+
+    <!-- Team -->
+    <section id="team" class="home-section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="section-heading">
+                        <h2>Services</h2>
+                        <div class="heading-line"></div>
+                        <p>we provide services of joy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="box-team wow bounceInUp" data-wow-delay="0.1s">
+                        <img src="img/1.png" alt="" class="img-circle img-responsive" />
+                        <h4>Flight</h4>
+                        <!-- <p>Art Director</p> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.3s">
+                    <div class="box-team wow bounceInUp">
+                        <img src="img/2.png" alt="" class="img-circle img-responsive" />
+                        <h4>Hotel Booking</h4>
+                        <!-- <p>Web Designer</p> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
+                    <div class="box-team wow bounceInUp">
+                        <img src="img/3.png" alt="" class="img-circle img-responsive" />
+                        <h4>Holidays Booking</h4>
+                        <!-- <p>Illustrator</p> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
+                    <div class="box-team wow bounceInUp">
+                        <img src="img/4.png" alt="" class="img-circle img-responsive" />
+                        <h4>Car Rental Services</h4>
+                        <!-- <p>Typographer</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="home-section bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="section-heading">
+                        <h2>Important Notice</h2>
+                        <div class="heading-line"></div>
+                        <p>News Regarding travel booking & Holidays.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ">
+                    <p class="text " style="font-size: 18px; ">
+                        <marquee direction="left ">
+                            <p style="color: #096386 !important ">For flights which have been cancelled, we have protected your booking... Customers who have booked their travel through a travel agent/online portal are requested to connect with the travel agent directly to redeem their credit
+                                note.
+                            </p>
+                        </marquee>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section " style="margin-top: 15px; ">
+        <div class="container-fluid ">
+            <div class="footer-content pt-3 pb-3 ">
+                <div class="row ">
+                    <div class="col-xl-3 col-lg-3 mb-50 ">
+                        <div class="footer-widget ">
+                            <div class="footer-widget-heading OurServicesHeading ">
+                                <h3>Our Services</h3>
+                            </div>
+                            <ul class="OurServices ">
+                                <li><a href="# ">International Holidays</a></li>
+                                <li><a href="# ">Indian Holidays</a></li>
+                                <li><a href="# ">Religious Packages</a></li>
+                                <li><a href="# ">Historical Packages</a></li>
+                                <li><a href="# ">Weekend Getaways</a></li>
+                                <li><a href="# ">Honeymoon Packages</a></li>
+                                <li><a href="# ">Passport</a></li>
+                                <li><a href="# ">Visa</a></li>
+                                <li><a href="# ">Book Hotels</a></li>
+                                <li><a href="# ">Book Flights</a></li>
+                                <li><a href="# ">Travel Insurance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9 ">
+                        <div class="row ">
+                            <div class="col-xl-3 col-lg-3 mb-50 ">
+                                <div class="footer-widget ">
+                                    <div class="footer-widget-heading ">
+                                        <h3>Indian Holidays</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="# ">Andaman Packages</a></li>
+                                        <li><a href="# ">Kashmir Packages</a></li>
+                                        <li><a href="# ">South Packages</a></li>
+                                        <li><a href="# ">North Packages</a></li>
+                                        <li><a href="# ">Kerala Packages</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-30 ">
+                                <div class="footer-widget ">
+                                    <div class="footer-widget-heading ">
+                                        <h3>International Holidays</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="# ">Dubai Packages</a></li>
+                                        <li><a href="# ">Singapore Packages</a></li>
+                                        <li><a href="# ">Mauritius Packages</a></li>
+                                        <li><a href="# ">Thailand Packages</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-50 ">
+                                <div class="footer-widget ">
+                                    <div class="footer-widget-heading ">
+                                        <h3>Ashok Travel World</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="# ">About Us</a></li>
+                                        <li><a href="# ">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-30 ">
+                                <div class="footer-widget ">
+                                    <div class="footer-widget-heading ">
+                                        <h3>About The Site</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="# ">Privacy Policy</a></li>
+                                        <li><a href="# ">Terms & Condition</a></li>
+                                        <li><a href="# ">Refund & Cancellation Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row " style="margin-top: 45px;padding-left: 30px; ">
+                            <div class="col-md-6" style="color: white; ">
+                                <div class="footer-widget ">
+                                    <div class="footer-widget-heading dowloadlink_heading ">
+                                        <h3>Download App</h3>
+                                    </div>
+                                    <ul style="display: flex; ">
+                                        <li>
+                                            <div class="download_app_link">
+                                                <a href="# "><img class="dowloadlink" src="./img/dowloadlink1.svg" alt="dowloadlink1 "></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="download_app_link2">
+                                                <a href="# "><img class="dowloadlink2" src="./img/dowloadlink2.svg" alt="dowloadlink1 "></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="color: white; ">
+                                <div class="footer-widget ">
+                                    <div class="footer-widget-heading dowloadlink_heading ">
+                                        <h3>Follow Us</h3>
+                                    </div>
+                                    <ul class="social-network">
+                                        <li>
+                                            <a href="#">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i style="color: #00c1c1;" class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i style="color: #00c1c1;" class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i style="color: #00c1c1;" class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i style="color: #00c1c1;" class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="page-footer indigo darken-2 center-on-small-only pt-0 mt-0 ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-12 ">
+                    <div class="mb-5 flex-center "><a class="px-3 " href="# "><i class="fa fa-facebook fa-lg white-text "></i></a><a class="px-3 " href="# "><i class="fa fa-twitter fa-lg white-text "></i></a><a class="px-3 " href="# "><i class="fa fa-google-plus
+                                                        fa-lg white-text "></i></a>
+                        <a class="px-3 " href="# "><i class="fa fa-linkedin fa-lg white-text "></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3 font-small ">
+            <div class="container-fluid ">
+                <div>
+                    <p style="color: white; ">Copyright &copy; 2021, All Right Reserved
+                        <a href="# "></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- js -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/stellar.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Custom Javascript File -->
+    <script src="js/custom.js"></script>
+
+    <script>
+        $(".dropdown-toggle").hover(function() {
+            $(".Holiday").addClass("show");
+            $(".megaOption").addClass("show");
+        }, function() {
+            $(".Holiday").removeClass("show");
+            $(".megaOption").removeClass("show");
+        });
+
+        $(".dropdown-menu").hover(function() {
+            $(".Holiday").addClass("show");
+            $(".megaOption").addClass("show");
+        }, function() {
+            $(".Holiday").removeClass("show");
+            $(".megaOption").removeClass("show");
+        });
+
+
+        // search box
+        $(document).ready(function() {
+            $("#watch-me").click(function() {
+                $("#show-me:hidden").show('slow');
+                $("#show-me-two").hide();
+                $("#show-me-three").hide();
+            });
+            $("#watch-me").click(function() {
+                if ($('watch-me').prop('checked') === false) {
+                    $('#show-me').hide();
+                }
+            });
+
+            $("#see-me").click(function() {
+                $("#show-me-two:hidden").show('slow');
+                $("#show-me").hide();
+                $("#show-me-three").hide();
+            });
+            $("#see-me").click(function() {
+                if ($('see-me-two').prop('checked') === false) {
+                    $('#show-me-two').hide();
+                }
+            });
+
+            $("#look-me").click(function() {
+                $("#show-me-three:hidden").show('slow');
+                $("#show-me").hide();
+                $("#show-me-two").hide();
+            });
+            $("#look-me").click(function() {
+                if ($('see-me-three').prop('checked') === false) {
+                    $('#show-me-three').hide();
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
