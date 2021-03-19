@@ -169,6 +169,14 @@ margin, padding
 Navbar
 ================================= */
 
+.navbar-default {
+    background: #0071c1 !important;
+}
+
+ul.megamenu_ul li a {
+    color: black !important
+}
+
 nav.navbar {
     position: fixed;
     margin-bottom: 0px;
@@ -205,7 +213,7 @@ nav.navbar.fixed-to-top {
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a.active,
 .navbar-default .navbar-nav>li>a:focus {
-    color: #00c1c1;
+    color: #0071c1;
     cursor: pointer;
     -webkit-transition: all 300ms ease-in-out;
     -moz-transition: all 300ms ease-in-out;
@@ -218,6 +226,10 @@ nav.navbar.fixed-to-top {
     width: 100px;
     border-radius: 30px;
     background: white;
+}
+
+a.logout {
+    color: #0071c1 !important;
 }
 
 
@@ -253,8 +265,8 @@ nav.navbar.fixed-to-top {
 }
 
 .dropdown-menu-right {
-    right: -90px;
     left: auto;
+    width: 133px;
 }
 
 li {
@@ -264,7 +276,7 @@ li {
 .logout {
     box-shadow: -5px 1px 9px rgb(0 0 0 / 32%);
     background: white;
-    color: #00c1c1 !important;
+    color: #0071c1;
     width: 150px !important;
     border-radius: 30px;
 }
@@ -323,7 +335,7 @@ div#show-me-two {
 section::before {
     width: 30px;
     height: 30px;
-    background: #00c1c1;
+    background: #0071c1;
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
     top: 18px;
     left: 18px;
@@ -339,7 +351,7 @@ input[type=radio] {
 section::after {
     width: 42px;
     height: 42px;
-    border: 1px solid #00c1c1;
+    border: 1px solid #0071c1;
     top: 11px;
     left: 11px;
 }
@@ -386,16 +398,16 @@ label.input_lable {
     font-weight: 400;
     line-height: 1.5;
     color: #ffffff;
-    background-color: #00c1c1;
+    background-color: #0071c1;
     background-clip: padding-box;
-    border: 1px solid #00c1c1;
+    border: 1px solid #0071c1;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .design {
     width: 25px;
     height: 25px;
-    border: 1px solid #00c1c1;
+    border: 1px solid #0071c1;
     border-radius: 100%;
     margin-right: 16px;
     position: relative;
@@ -414,19 +426,19 @@ label.input_lable {
 }
 
 .design:before {
-    background: #00c1c1;
+    background: #0071c1;
     opacity: 0;
     transition: .3s;
 }
 
 .design::after {
-    background: #00c1c1;
+    background: #0071c1;
     opacity: .4;
     transition: .6s;
 }
 
 .text {
-    color: #00c1c1;
+    color: #0071c1;
     font-weight: bold;
 }
 
@@ -439,17 +451,17 @@ label.input_lable {
 
 .input_lable input:hover+.design,
 .input_lable input:focus+.design {
-    border: 1px solid #00c1c1;
+    border: 1px solid #0071c1;
 }
 
 .input_lable input:hover+.design:before,
 .input_lable input:focus+.design:before {
-    background: #00c1c1;
+    background: #0071c1;
 }
 
 .input_lable input:hover~.text,
 .input_lable input:focus~.text {
-    color: #00c1c1;
+    color: #0071c1;
 }
 
 .input_lable input:focus+.design::after,
@@ -464,7 +476,7 @@ label.input_lable {
 }
 
 section#counts {
-    background: #00c1c1;
+    background: #0071c1;
     height: 409px;
 }
 
@@ -496,7 +508,7 @@ label {
     font-size: 17px;
     margin: 8px;
     padding: 0 10px;
-    color: #00c1c1;
+    color: #0071c1;
     -webkit-transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
     transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
 }
@@ -512,7 +524,7 @@ label {
 }
 
 #Check_content {
-    color: #00c1c1;
+    color: #0071c1;
     padding-right: 15px;
     font-weight: 600;
 }
@@ -536,7 +548,7 @@ label {
 }
 
 hr {
-    background: #00c1c1;
+    background: #0071c1;
     margin: 0 100px;
 }
 
@@ -548,7 +560,7 @@ input[type=number] {
     margin-top: -3px;
     border: 1px solid white;
     font-size: 16px;
-    background-color: #00c1c1;
+    background-color: #0071c1;
     color: white;
     border-radius: 30px;
     height: 50px;
@@ -612,7 +624,7 @@ Home sections
     display: block;
     height: 2px;
     width: 116px;
-    background: #00c1c1;
+    background: #0071c1;
     margin-bottom: 20px;
 }
 
@@ -807,11 +819,11 @@ Intro
     color: #fff;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
-    border: 2px solid #00c1c1;
+    border: 2px solid #0071c1;
 }
 
 #intro .btn-get-started:hover {
-    background: #00c1c1;
+    background: #0071c1;
     color: #fff;
     text-decoration: none;
 }
@@ -993,6 +1005,11 @@ Works
 .back-to-top {
     background: #0d8bf4 !important;
     color: #fff;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 30px;
 }
 
 @-webkit-keyframes loader {
