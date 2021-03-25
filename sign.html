@@ -16,7 +16,7 @@
     @import url('https://fonts.googleapis.com/css?family=Mukta');
     a {
         text-decoration: none;
-        color: #0071c1;
+        color: #5a2f51;
     }
     
     .row_header_support_icon {
@@ -29,7 +29,7 @@
     
     #header .logo h1 a,
     #header .logo h1 a:hover {
-        color: #0071c1;
+        color: #5a2f51;
         text-decoration: none;
     }
     
@@ -54,7 +54,7 @@
     #header .logo {
         overflow: hidden;
         padding: 16px 30px 12px 30px;
-        background: #0071c1;
+        background: #5a2f51;
     }
     
     #header .logo h1 {
@@ -81,11 +81,11 @@
         #header {
             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
             top: 0;
-            background: #0071c1;
+            background: #5a2f51;
         }
         #header.header-scrolled,
         #header .header-container {
-            background: #0071c1;
+            background: #5a2f51;
         }
         #header .logo h1 {
             font-size: 24px;
@@ -124,12 +124,12 @@
     .nav-menu a:hover,
     .nav-menu .active>a,
     .nav-menu li:hover>a {
-        color: #0071c1;
+        color: #5a2f51;
         text-decoration: none;
     }
     
     .nav-menu .get-started a {
-        background: #0071c1;
+        background: #5a2f51;
         color: #fff;
         border-radius: 50px;
         margin: 0 15px;
@@ -176,7 +176,7 @@
     .nav-menu .drop-down ul a:hover,
     .nav-menu .drop-down ul .active>a,
     .nav-menu .drop-down ul li:hover>a {
-        color: #0071c1;
+        color: #5a2f51;
     }
     
     .nav-menu .drop-down>a:after {
@@ -205,6 +205,26 @@
         font-family: IcoFont;
         position: absolute;
         right: 15px;
+    }
+    
+    .row.copyright_row {
+        background: #6b4463;
+    }
+    
+    footer.footer-section {
+        background: #6b4463;
+        color: white;
+    }
+    
+    .row.footer_link_row {
+        background: #6b4463;
+        color: white;
+    }
+    
+    li.footer_link a {
+        text-decoration: none;
+        color: #ffffff;
+        margin: 20px;
     }
     
     @media (max-width: 1366px) {
@@ -273,7 +293,7 @@
     .mobile-nav a:hover,
     .mobile-nav .active>a,
     .mobile-nav li:hover>a {
-        color: #0071c1;
+        color: #5a2f51;
         text-decoration: none;
     }
     
@@ -282,7 +302,7 @@
     }
     
     .mobile-nav .get-started a {
-        background: #0071c1;
+        background: #5a2f51;
         color: #fff;
         border-radius: 50px;
         margin: 0 15px;
@@ -346,12 +366,18 @@
         color: #fff;
     }
     
+    .login-info-box h2,
+    .register-info-box h2 {
+        font-size: 32px;
+        color: white;
+    }
+    
     .banner_img {
-        background: url(./img/bg3.jpg) no-repeat center center;
+        background: url(./img/2.jpg) no-repeat center center;
         position: relative;
-        height: 85vh;
+        height: 80vh;
         background-size: cover;
-        top: 69px;
+        top: 68px;
     }
     
     .login-reg-panel {
@@ -364,7 +390,7 @@
         left: 0;
         margin: auto;
         height: 355px;
-        background-color: #00c1c1a1;
+        background-color: #6b4463b0;
     }
     
     .white-panel {
@@ -388,9 +414,14 @@
         color: white;
     }
     
+    a,
+    a:hover {
+        color: #6b4463;
+    }
+    
     .login-reg-panel #label-login,
     .login-reg-panel #label-register {
-        border: 1px solid #185f4c;
+        border: 1px solid white;
         padding: 5px 5px;
         width: 150px;
         display: block;
@@ -446,16 +477,16 @@
         display: block;
         margin: 20px 0;
         padding: 15px;
-        border: 1px solid #0071c1;
+        border: 1px solid #5a2f51;
         outline: none;
-        background: #0071c1;
+        background: #5a2f51;
         border-radius: 30px;
     }
     
     .login_btn {
         max-width: 150px;
         width: 100%;
-        background: #0071c1;
+        background: #5a2f51;
         color: #f9f9f9;
         border: none;
         text-transform: uppercase;
@@ -476,16 +507,16 @@
         display: block;
         margin: 20px 0;
         padding: 15px;
-        border: 1px solid #0071c1;
+        border: 1px solid #5a2f51;
         outline: none;
-        background: #0071c1;
+        background: #5a2f51;
         border-radius: 30px;
     }
     
     .Register_btn {
         max-width: 150px;
         width: 100%;
-        background: #0071c1;
+        background: #5a2f51;
         color: #f9f9f9;
         border: none;
         padding: 10px;
@@ -520,6 +551,7 @@
         list-style: none;
         display: flex;
         justify-content: center;
+        margin: 16px 0 0 0;
     }
     
     .footer_ul2 {
@@ -530,7 +562,7 @@
     }
     
     .footer {
-        margin-top: 9pc;
+        margin-top: 69px;
     }
     
     li.footer_link {
@@ -614,36 +646,7 @@
                     <li class="current"><a href="#intro" class="active">Flight</a></li>
                     <li><a href="#about">Hotel</a></li>
                     <li><a href="#services">Holidys</a></li>
-                    <li class="nav-item px-4 dropdown Holiday">
-                        <!-- first is the link in your navbar -->
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" aria-haspopup="true" aria-expanded="false">car</a>
-
-                        <!-- your mega menu starts here! -->
-                        <div class="dropdown-menu megaOption dropdown-menu-right container" aria-labelledby="servicesDropdown">
-                            <div class="row">
-                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
-                                    <li>item1</li>
-                                    <li>item1</li>
-                                    <li>item1</li>
-                                </ul>
-                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
-                                    <li>item1</li>
-                                    <li>item1</li>
-                                    <li>item1</li>
-                                </ul>
-                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
-                                    <li>item1</li>
-                                    <li>item1</li>
-                                    <li>item1</li>
-                                </ul>
-                                <ul class="col-md-3 megamenu_ul"><a href=""> Pineapple</a>
-                                    <li>item1</li>
-                                    <li>item1</li>
-                                    <li>item1</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+                    <li><a href="#services">car</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#contact" class="logout">Logout</a></li>
                 </ul>
